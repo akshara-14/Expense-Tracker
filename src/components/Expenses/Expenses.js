@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = (props) => {
     const [filteredYear, setFilteredYear] = useState("2021"); // 2021 is set as a default value here
@@ -50,6 +51,7 @@ const Expenses = (props) => {
                     ))} */}
 
                 {/* OR */}
+                <ExpensesChart expenses={filteredExpenses} />
                 <ExpensesList items={filteredExpenses} />
 
                 {/* In our expenses array we map every expense into an ExpenseItem JSX element */}
